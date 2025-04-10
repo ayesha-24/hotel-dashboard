@@ -1,0 +1,7 @@
+{
+  "name": "hotel-dashboard",
+  "scripts": {
+    "frontend": "cd client && npm install && npm run dev",
+    "backend": "cd server && uvicorn app.main:app --reload --port 8001"
+  }
+}
