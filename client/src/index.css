@@ -39,6 +39,7 @@ td {
   border: none;
   border-radius: 3px;
   font-size: 0.95rem;
+  cursor: pointer;
 }
 
 .decline-button {
@@ -48,4 +49,17 @@ td {
   border: none;
   border-radius: 3px;
   font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.room-button {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  color: var(--red);
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: underline;
 }

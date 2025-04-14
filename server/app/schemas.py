@@ -1,5 +1,5 @@
 
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel
 
 class RoomBase(BaseModel):
@@ -8,6 +8,7 @@ class RoomBase(BaseModel):
     facilities: List[str]
     created: str
     updated: str | None = None
+    imageUrl: Optional[str] = None 
 
 class RoomCreate(RoomBase):
     pass

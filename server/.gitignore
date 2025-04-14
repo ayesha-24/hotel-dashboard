@@ -7,6 +7,8 @@ venv/
 
 *.db
 
+/app/uploads/
+
 .pytest_cache/
 .cache/
 

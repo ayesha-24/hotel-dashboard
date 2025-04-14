@@ -134,15 +134,12 @@ const PrintableRoom = ({ room }: PrintableRoomProps) => {
         <p>{room.description}</p>
       </div>
 
-      {room.imageUrl && (
-        <div>
-          <img
-            src={room.imageUrl}
-            alt={room.name}
-            style={{ width: "100%", borderRadius: "6px", marginBottom: "30px" }}
-          />
-        </div>
-      )}
+      <img
+        src={`http://localhost:8001${room.imageUrl}`}
+        crossOrigin="anonymous"
+        alt="Room preview"
+        style={{ width: "100%", marginBottom: "1rem", borderRadius: "6px" }}
+      />
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", marginBottom: "40px" }}>
         <ul style={{ flex: "1", listStyle: "disc", paddingLeft: "20px" }}>

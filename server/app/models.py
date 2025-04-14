@@ -11,3 +11,4 @@ class Room(Base):
     facilities = Column(String)
     created = Column(String)
     updated = Column(String)
+    imageUrl = Column(String)

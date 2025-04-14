@@ -78,13 +78,12 @@ When you click **Download PDF**, a custom template is rendered and exported usin
 - PDF generation from custom layout
 - Sidebar navigation
 - Full backend test coverage
+- Image upload preview
 
 ---
 
 ## 🧼 Todo / Improvements
 
-- Image upload preview
-- Persistent storage for uploaded images
 - Authentication for admin users
 
 ---

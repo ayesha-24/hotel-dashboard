@@ -21,7 +21,8 @@ def create_room(db: Session, room: schemas.RoomCreate):
         description=room.description,
         facilities=json.dumps(room.facilities),
         created=room.created,
-        updated=room.updated
+        updated=room.updated,
+        imageUrl=room.imageUrl
     )
     db.add(db_room)
     db.commit()
@@ -32,12 +33,12 @@ def create_room(db: Session, room: schemas.RoomCreate):
 def update_room(db: Session, room_id: int, room_data: schemas.RoomCreate):
     db_room = db.query(models.Room).filter(models.Room.id == room_id).first()
     for key, value in room_data.dict().items():
-        if key != "facilities":
+        if key == "facilities":
+            setattr(db_room, key, json.dumps(value))
+        else:
             setattr(db_room, key, value)
-    db_room.facilities = json.dumps(room_data.facilities)
     db.commit()
     db.refresh(db_room)
-    db_room.facilities = json.loads(db_room.facilities)
     return db_room
 
 def delete_room(db: Session, room_id: int):
